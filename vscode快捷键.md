@@ -2,6 +2,7 @@
 title: vscode快捷键
 date: 2020-07-01 09:31:18
 tags:
+	- 快捷键
 	- vscode
 categories: vscode
 ---

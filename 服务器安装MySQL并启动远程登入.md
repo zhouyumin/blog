@@ -12,6 +12,20 @@ categories: 数据库
 sudo yum install mysql-server
 ```
 
+如果上述命令无法安装，原因是源内没有mysql
+
+去官网下载MySQL yum Repository安装就行 官网地址：www.mysql.com
+
+Repository下载地址： https://dev.mysql.com/downloads/repo/yum/
+
+下载rpm后使用yum安装rpm，然后执行上述安装MySQL命令
+
+安装rpm 命令
+
+``` shell
+sudo yum install -y mysql80-community-release-el7-3.noarch.rpm
+```
+
 ## 设置开机自启
 
 ``` shell
