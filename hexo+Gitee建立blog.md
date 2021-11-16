@@ -124,7 +124,7 @@ hexo d
 新建仓库名称为blog，我这里已经建好了所以提示已存在  
 这样你就能以 username.gitee.io/blog 访问你的blog，如果你不想以二级目录的形式访问blog想以username.gitee.io的形式直接访问，你可以把仓库名设置成和用户名一样
 
-![创建仓库](/images/pictures/blog/create_repertory.jpg)
+![创建仓库](/images/pictures/create_repertory.jpg)
 
 **3.修改_config.yml**
 ``` yaml
@@ -155,11 +155,11 @@ hexo d
 **5.启用Gitee Page**
 点击服务选择 Gitee Pages
 
-![启用Page](/images/pictures/blog/Gitee_Page1.jpg)
+![启用Page](/images/pictures/Gitee_Page1.jpg)
 
 然后更新就能使用了，网址就是图中红框的那个
 
-![更新Page](/images/pictures/blog/Gitee_Page2.jpg)
+![更新Page](/images/pictures/Gitee_Page2.jpg)
 
 这样你的blog就部署完成了
 

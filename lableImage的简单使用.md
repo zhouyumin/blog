@@ -21,14 +21,14 @@ LabelImg是一个开源的图形图像注释工具，地址：https://github.com
 ## 2.选择标注的数据格式
 该程序可以标注VOC格式的也可以标注YOLO格式的，我们打开软件首先就要更改格式，我们要的是YOLO的数据集所以我们点击左侧工具栏中的PascalVoc图标切换为YOLO
 
-![切换格式](/images/pictures/labelImage/1.jpg)
+![切换格式](/images/pictures/1.jpg)
 
 ## 3.开始标记
 点击Open Dir选择JPEGImages文件夹
 
 点击Change Save Dir选择Annotations文件夹
 
-![工具栏](/images/pictures/labelImage/2.jpg)
+![工具栏](/images/pictures/2.jpg)
 
 按W键或点击Create\nRectBox开始创建矩形框，方法和电脑截图一样，我们把要进行识别训练的区域标记出来就行
 
@@ -41,20 +41,20 @@ LabelImg是一个开源的图形图像注释工具，地址：https://github.com
 
 如果你没保存就切换图片会有弹框提醒这时我们选中NO这个按钮就能取消切换了
 
-![标记](/images/pictures/labelImage/3.jpg)
-
+![标记](/images/pictures/3.jpg)
 
 # 一些方便的快捷键
-|快捷键|功能|
-|-----|----|
-ESC     |取消正在标记的矩形框
-Delete  |删掉选中的已标记好的矩形框
-W       |开始创建矩形框
-D       |切到下一张图片
-A       |切到上一张图片
-Ctrl + S|保存
-Ctrl + +|放大
-Ctrl - -|缩小
-↑ → ↓ ← |移动选中的矩形框
-Ctrl + U|Open Dir
-Ctrl + R|Change Save Dir
+
+| 快捷键 | 功能 |
+| ------ | ---- |
+|ESC     |取消正在标记的矩形框|
+|Delete  |删掉选中的已标记好的矩形框|
+|W       |开始创建矩形框|
+|D       |切到下一张图片|
+|A       |切到上一张图片|
+|Ctrl + S|保存|
+|Ctrl + +|放大|
+|Ctrl - -|缩小|
+|↑ → ↓ ← |移动选中的矩形框|
+|Ctrl + U|Open Dir|
+|Ctrl + R|Change Save Dir|

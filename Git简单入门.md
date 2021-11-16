@@ -29,7 +29,7 @@ git config --global user.email "用户邮箱"
 
 ***工作区域***，***暂存区域***，***Git仓库*** 
 
-![框架](/images/pictures/Git/core_frame.jpg)
+![框架](/images/pictures/core_frame.jpg)
 
 工作区域（Working Directory）就是你平时存放项目代码的地方
 
@@ -50,7 +50,7 @@ Git 仓库（Repository）就是安全存放数据的位置，这里边有你提
 
 做个简单的演示 先随便建立一个文件吧，然后随便写点内容保存 然后我们要把这个文件提交到暂存区域 使用命令 `git add `你要提交的文件名 (文件名可以是多个并列 如git add 文件1 文件2，后面的命令同理) 然后把暂存区域的文件提交到仓库 使用命令 `git commit -m "提交说明"  `(PS:提交说明强制要写，不然你以后都不知道这次提交做了些什么事) 
 
-![test1](/images/pictures/Git/test1.jpg)
+![test1](/images/pictures/test1.jpg)
 
 记住你未放入过暂存区的文件都处于未跟踪的状态，也就是不归git管，一旦被跟踪git就可以控制它了 如果你把提交过了的文件做了修改，想再提交上去，岂不得再add 然后commit？不必，因为它已经处于跟踪状态了，可一步到位 直接使用 `git commit -am "提交说明" `就可提交到仓库了 解释： -a 选项其实是专为懒人添加的。添加了 -a 选项，Git 会自动帮你将工作目录中所有“已跟踪”的文件先 add 到暂存区域，然后再执行 commit 命令。另外，-am 是 -a -m 的缩写，多个选项可以写在一起，懒人嘛~
 
@@ -62,27 +62,27 @@ Git 仓库（Repository）就是安全存放数据的位置，这里边有你提
 ## 查看记录
 使用 `git log` 命令则可以看到历史提交记录
 
-![test2](/images/pictures/Git/test2.jpg)
+![test2](/images/pictures/test2.jpg)
 
 ---
 
 ## 回到过去 
 把暂存区的文件拿回到工作区 命令格式： `git checkout 文件名 `如果你把文件提交到了暂存区后又做出了改动（改动可以是修改也可以是删除），使用这条命令把它拿回来的话则做出的修改作废，文件回到了提交到暂存区的那个版本（所以你辛辛苦苦修改的部分会丢失，不小心删掉的会回来，前提是你提交过了）
 
-![test3](/images/pictures/Git/test3.jpg)
+![test3](/images/pictures/test3.jpg)
 
 ---
 
 ## 快照回滚
 当我们打算放弃当前的版本，想回到前面的版本的话可以使用reset命令回滚快照 什么是快照？ 想象一下，给一张桌子拍一张照片，纪录了桌子上所有物品的位置、状态，这样就可以称之为快照了。 我们不必存储所有的物品，只需存储这个照片就可以了，下一次想恢复以前的状态的时候，只需要翻出当时的那张照片，再把物品按照那张照片里的位置摆放一下就OK了。 所以快照保存的是每一次提交的版本，你每一次提交到Git仓库则生成一个快照。 回滚快照的命令格式： `git reset 快照`
 
-![test4](/images/pictures/Git/test4.jpg)
+![test4](/images/pictures/test4.jpg)
 
 HEAD表示的是最新保存的快照（类似于头指针吧，会编程的都懂） 使用 `git reset HEAD `会把HEAD指向的版本（快照）返回到暂存区 当我们想回滚到上上次的快照则可把HEAD 改成HEAD\~ HEAD\~ 表示 HEAD 的上一个快照，HEAD\~\~则表示 HEAD 的上上一个快照，如果希望表示HEAD的上n个快照，那么可以直接用 HEAD\~n 来表示。
 
 值得注意的是，你回到了哪个快照，HEAD也跟着移动指向了哪个快照，这是同步的，HEAD永远指向当前快照
 
-![快照](/images/pictures/Git/snap.jpg)
+![快照](/images/pictures/snap.jpg)
 
 reset其实是有选项的 `git reset HEAD `其实是   `git reset --mixed HEAD `的简写模式，因为mixed是reset的默认选项，所以可以省略
 
@@ -90,7 +90,7 @@ reset其实是有选项的 `git reset HEAD `其实是   `git reset --mixed HEAD 
 
 **--hard 选项：** hard选项则相对强硬点了，它不仅会将版本快照返回到暂存区，还会进一步返回到工作区，简直一步到位啊
 
-![test5](/images/pictures/Git/test5.jpg)
+![test5](/images/pictures/test5.jpg)
 
 回滚个别文件 reset 不仅可以回滚指定快照，还可以回滚个别文件。 命令格式为 
 ```
@@ -102,12 +102,12 @@ git reset 快照 文件
 
  我们可以不通过HEAD直接指定要回滚的快照 命令格式： `git reset ID `什么是快照的ID？ 你每一次提交的版本都会有一个ID，你可以用git log 看到每次提交的版本的ID（就是前面那串编码了）
 
- ---
+---
 
 ## 穿越过去穿越回来
 当我们将快照回滚到了历史版本后悔了想回来怎么办？ 简单只要知道快照的ID就能reset到任意快照 那么怎么查看ID呢？ `git reflog `命令可以帮到您 Git记录了你的每一次操作，你的一举一动都能通过 `git reflog `查看，所以不用担心自己会走丢了，看看reflog 就能知道自己干过些什么事了，无论怎么穿越都能找到回去的路。
 
-![test6](/images/pictures/Git/test6.jpg)
+![test6](/images/pictures/test6.jpg)
 
 >参考：https://fishc.com.cn/forum-334-1.html
 >相关视频教程：https://www.bilibili.com/video/av27780400

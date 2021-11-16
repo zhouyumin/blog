@@ -78,8 +78,8 @@ sudo systemctl restart mysqld
 
 去服务器的控制台安全组里配置规则添加3306端口
 
-![](/images/pictures/MySQL/port.jpg)
+![](/images/pictures/port.jpg)
 
 ## 远程连接
 
-![](/images/pictures/MySQL/connect.jpg)
+![](/images/pictures/connect.jpg)

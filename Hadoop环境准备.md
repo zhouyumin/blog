@@ -35,7 +35,7 @@ DNS1=192.168.23.2
 
 GATEWAY 和 DNS 要和 NAT 设置里的网关IP一致，NETMASK也要和 NAT 设置里的子网掩码一致
 
-![](/images/pictures/Hadoop/net.png)
+![](/images/pictures/net.png)
 
 ### 修改主机名
 
